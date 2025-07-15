@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/phylobusco/master/assets/schema_input.json",
+    "title": "nf-core/phylobusco pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "errorMessage": "Sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "genome": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.(fa|fasta|fna)(\\.gz)?$",
+                "errorMessage": "Genome file must be provided, cannot contain spaces and must have extension '.fa', '.fasta', or '.fna' (optionally gzipped)"
+            },
+            "gff": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.(gff|gff3|gtf)(\\.gz)?$",
+                "errorMessage": "Annotation file must be provided, cannot contain spaces and must have extension '.gff', '.gff3', or '.gtf' (optionally gzipped)"
+            }
+        },
+        "required": ["sample", "genome", "gff"]
+    }
+}

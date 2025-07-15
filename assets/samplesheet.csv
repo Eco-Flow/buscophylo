@@ -1,0 +1,4 @@
+sample,genome,gff
+species1,genomes/species1.fna,annotations/species1.gff
+species2,genomes/species2.fna,annotations/species2.gff
+species3,genomes/species3.fna,annotations/species3.gff

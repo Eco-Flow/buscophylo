@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	82/f0fd7a	28048	NFCORE_PHYLOBUSCO:PHYLOBUSCO:EXTRACT_BUSCOS (mycoplasma_genitalium)	FAILED	125	2025-07-15 18:03:20.985	329ms	249ms	-	-	-	-	-
